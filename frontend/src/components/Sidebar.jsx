@@ -12,10 +12,10 @@ export default function Sidebar({ activeView, setActiveView }) {
   return (
     <aside className="sidebar glass-panel">
       <div>
-        <p className="eyebrow">Internship Assignment</p>
-        <h1>Neon Grid Professional</h1>
+        <p className="eyebrow">Enterprise Solutions</p>
+        <h1>Resource Portal</h1>
         <p className="sidebar-copy">
-          Secure auth, 1:1 teacher profiles, and recruiter-friendly visibility in one polished dashboard.
+          Academic Resource Management System (ARMS). Secure user provisioning and 1:1 teacher profile synchronization.
         </p>
       </div>
 

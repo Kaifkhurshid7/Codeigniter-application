@@ -1,6 +1,6 @@
-# Full-Stack Intern Assignment: CodeIgniter 4 + ReactJS
+# ARMS: Academic Resource Management System
 
-This project is a full-stack application built with a custom CodeIgniter 4 backend and a ReactJS (Vite) frontend. It features JWT authentication, transactional registration into multiple tables, and a modern, responsive user interface.
+This project is a high-integrity full-stack application built with a custom CodeIgniter 4 backend and a ReactJS (Vite) frontend. It features secure user provisioning, JWT-based authentication, and professional academic profile synchronization.
 
 ## Features
 - **Backend**:

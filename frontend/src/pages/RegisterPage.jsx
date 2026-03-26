@@ -24,8 +24,8 @@ export default function RegisterPage({ onSubmit, loading }) {
 
   return (
     <FormCard
-      title="Register New User"
-      description="Create secure application users with hashed passwords before they access the protected dashboard."
+      title="User Provisioning"
+      description="Initialize a new user record within the central ARMS directory. Passwords are encrypted server-side."
     >
       <form className="form-grid" onSubmit={handleSubmit}>
         <InputField label="First Name" name="first_name" value={form.first_name} onChange={handleChange} placeholder="Aarav" />

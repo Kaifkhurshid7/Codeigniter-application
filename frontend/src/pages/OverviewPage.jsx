@@ -26,11 +26,12 @@ export default function OverviewPage({ data }) {
   return (
     <div className="overview-container">
       <section className="hero-panel glass-panel">
-        <p className="eyebrow">Enterprise Intelligence</p>
-        <h2>A sophisticated full-stack architecture for modern user & teacher management.</h2>
+        <p className="eyebrow">Administrative Intelligence</p>
+        <h2>Securely orchestrating relational data and user access.</h2>
         <p>
-          This dashboard demonstrates secure registration, JWT-based authentication, 
-          transactional data persistence across linked tables, and protected API consumption.
+          ARMS provides high-integrity user provisioning and academic profile management. 
+          Leveraging JWT security and transactional database constraints, we ensure 
+          perfect 1:1 synchronization between authentication and professional records.
         </p>
         <div className="illustration-area">
           <img 

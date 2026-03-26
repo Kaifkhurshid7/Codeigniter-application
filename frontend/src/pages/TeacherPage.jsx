@@ -24,8 +24,8 @@ export default function TeacherPage({ onSubmit, loading }) {
 
   return (
     <FormCard
-      title="Create Teacher Profile"
-      description="Insert linked user and teacher records while preserving the one-to-one relationship constraint."
+      title="Profile Synchronization"
+      description="Create an integrated user and academic profile. This action enforces strict 1:1 relationship constraints."
     >
       <form className="form-grid" onSubmit={handleSubmit}>
         <InputField label="First Name" name="first_name" value={form.first_name} onChange={handleChange} placeholder="Nisha" />

@@ -28,8 +28,8 @@ export default function LoginPage({ onSubmit, loading }) {
 
   return (
     <FormCard
-      title="Login"
-      description="Authenticate with email and password to receive a JWT token for protected API requests."
+      title="Access Gateway"
+      description="Administrative authentication required. Provide valid credentials to initialize a secure session."
     >
       <form className="form-grid compact" onSubmit={handleSubmit}>
         <InputField label="Email" name="email" type="email" value={form.email} onChange={handleChange} placeholder="admin@example.com" />
