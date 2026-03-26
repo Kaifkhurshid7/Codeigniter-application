@@ -5,7 +5,7 @@ export default function Topbar({ user, onRefresh, loading }) {
     <header className="topbar glass-panel">
       <div>
         <p className="eyebrow">Authentication Dashboard</p>
-        <h2>Recruiter-ready full stack demo</h2>
+        <h2>Assigment demo</h2>
       </div>
 
       <div className="topbar-actions">

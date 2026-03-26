@@ -26,51 +26,110 @@ This project is a high-integrity full-stack application built with a custom Code
 ```
 
 ## Prerequisites
-- **PHP**: ^8.1
-- **Node.js**: ^18.x
-- **MySQL** or **PostgreSQL**
+- **PHP**: `8.1` or later
 - **Composer**: For PHP dependency management
-- **npm**: For Node dependency management
+- **Node.js**: `18.x` or later
+- **npm**: Installed with Node.js
+- **MySQL** or **PostgreSQL**
 
-## Setup Instructions
+## How to Start the Project
 
-### 1. Database Setup
-1. Create a MySQL database named `internship_assignment`.
-2. Import the `backend/database.sql` file into your database.
+### 1. Install and verify required tools
 
-### 2. Backend Configuration
-1. Navigate to the `backend` directory.
-2. Ensure you have an `env` file (one is provided by default).
-3. Update the database credentials in the `env` file to match your local setup:
-   ```env
-   database.default.hostname = localhost
-   database.default.database = internship_assignment
-   database.default.username = root
-   database.default.password = 
-   ```
+Make sure the following commands work in a new terminal:
 
-### 3. Install Dependencies
-1. Run `composer install` in the `backend` directory (if you have composer installed).
-2. Run `npm install` in the `frontend` directory.
+```powershell
+php -v
+composer -V
+node -v
+npm -v
+```
 
-### 4. Running the Application
-To run both backend and frontend simultaneously, use the provided `run.bat` script (for Windows) or run the following commands in separate terminals:
+If `php` is not recognized on Windows:
 
-**Backend**:
-```bash
-cd backend/public
+1. Install PHP using XAMPP, Laragon, WAMP, or a standalone PHP build.
+2. Add the folder containing `php.exe` to your system `Path`.
+3. Reopen the terminal and run `php -v` again.
+
+Common PHP locations on Windows:
+
+- `C:\xampp\php`
+- `C:\laragon\bin\php\php-8.x.x`
+- `C:\wamp64\bin\php\php8.x.x`
+
+### 2. Create the database
+
+1. Create a database named `internship_assignment`.
+2. Import `backend/database.sql` into that database.
+
+### 3. Configure the backend
+
+1. Go to the `backend` folder.
+2. Make sure an `env` file exists.
+3. Update the database credentials in the `env` file:
+
+```env
+database.default.hostname = localhost
+database.default.database = internship_assignment
+database.default.username = root
+database.default.password =
+```
+
+### 4. Install project dependencies
+
+Run these commands from the project root:
+
+```powershell
+cd backend
+composer install
+```
+
+```powershell
+cd ..\frontend
+npm install
+```
+
+### 5. Start the application
+
+From the project root, run:
+
+```powershell
+.\run.bat
+```
+
+This starts:
+
+- **Frontend**: `http://localhost:5173`
+- **Backend**: `http://localhost:8080`
+
+### 6. Manual start option
+
+If `run.bat` does not work, start the backend and frontend in two separate terminals.
+
+Backend:
+
+```powershell
+cd backend\public
 php -S localhost:8080
 ```
 
-**Frontend**:
-```bash
+Frontend:
+
+```powershell
 cd frontend
 npm run dev
 ```
 
-The application will be available at:
-- **Frontend**: `http://localhost:5173`
-- **Backend API**: `http://localhost:8080`
+## Troubleshooting
+
+- `PHP is not installed or not in your PATH`
+  Install PHP and add its folder to the Windows `Path` environment variable.
+- `composer is not recognized`
+  Install Composer and reopen the terminal.
+- `npm is not recognized`
+  Install Node.js and reopen the terminal.
+- Database connection error
+  Check the `env` database credentials and confirm your database server is running.
 
 ## Author
 kaif khurshid
