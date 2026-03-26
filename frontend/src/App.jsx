@@ -6,6 +6,7 @@ import RegisterPage from './pages/RegisterPage';
 import TeacherPage from './pages/TeacherPage';
 import TablesPage from './pages/TablesPage';
 import OverviewPage from './pages/OverviewPage';
+import LoadingOverlay from './components/LoadingOverlay';
 import { authService, teacherService, dataService } from './services/api';
 
 export default function App() {
@@ -119,6 +120,7 @@ export default function App() {
           {renderView()}
         </div>
       </main>
+      {loading && <LoadingOverlay />}
     </div>
   );
 }

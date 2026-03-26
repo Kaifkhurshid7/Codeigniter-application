@@ -1,47 +1,57 @@
 import { Activity, Database, Shield } from 'lucide-react';
 import StatCard from '../components/StatCard';
 
-export default function OverviewPage({ users, teachers, tokenReady }) {
+export default function OverviewPage({ data }) {
   const stats = [
     {
       label: 'Registered Users',
-      value: users.length,
+      value: data?.users?.length || 0,
       detail: 'Live API-backed user records',
-      accent: 'linear-gradient(135deg, #00c6ff, #00f2fe)',
       icon: Database,
     },
     {
       label: 'Teacher Profiles',
-      value: teachers.length,
+      value: data?.teachers?.length || 0,
       detail: 'Strict one-to-one user mapping',
-      accent: 'linear-gradient(135deg, #7f5af0, #4f46e5)',
       icon: Activity,
     },
     {
       label: 'Protected Access',
-      value: tokenReady ? 'Active' : 'Pending',
+      value: localStorage.getItem('internship_token') ? 'Active' : 'Pending',
       detail: 'JWT token required for data routes',
-      accent: 'linear-gradient(135deg, #22c55e, #14b8a6)',
       icon: Shield,
     },
   ];
 
   return (
-    <div className="content-grid overview-grid">
+    <div className="overview-container">
       <section className="hero-panel glass-panel">
-        <p className="eyebrow">System Summary</p>
-        <h2>Modern auth and user management with a recruiter-friendly presentation layer.</h2>
+        <p className="eyebrow">Enterprise Intelligence</p>
+        <h2>A sophisticated full-stack architecture for modern user & teacher management.</h2>
         <p>
-          This dashboard demonstrates secure registration, JWT login, teacher profile creation, protected APIs,
-          and real-time table rendering across a neon-grid control surface.
+          This dashboard demonstrates secure registration, JWT-based authentication, 
+          transactional data persistence across linked tables, and protected API consumption.
         </p>
+        <div className="illustration-area">
+          <img 
+            src="/dashboard.png" 
+            alt="Dashboard Illustration" 
+            style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} 
+          />
+        </div>
       </section>
 
       <section className="stats-grid">
         {stats.map((item) => (
-          <StatCard key={item.label} label={item.label} value={item.value} detail={item.detail} accent={item.accent} />
+          <StatCard 
+            key={item.label} 
+            label={item.label} 
+            value={item.value} 
+            detail={item.detail} 
+          />
         ))}
       </section>
     </div>
   );
 }
+
